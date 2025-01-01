@@ -1,0 +1,39 @@
+/* MovingLogoStrip.css */
+.logo-strip-container {
+    width: 100%;
+    overflow: hidden;
+    /* Hide overflow to create a seamless loop */
+    white-space: nowrap;
+    /* Prevent logos from wrapping */
+    background-color: #f8f9fa;
+    /* Optional: Add a background color */
+    padding: 10px 0;
+    /* Optional: Add padding */
+}
+
+.logo-strip {
+    display: inline-block;
+    animation: scrollLogos 20s linear infinite;
+    /* Adjust animation duration as needed */
+}
+
+.logo {
+    height: 50px;
+    /* Adjust logo height */
+    margin: 0 20px;
+    /* Add spacing between logos */
+    vertical-align: middle;
+    /* Align logos vertically */
+}
+
+@keyframes scrollLogos {
+    0% {
+        transform: translateX(0);
+        /* Start from the left */
+    }
+
+    100% {
+        transform: translateX(-50%);
+        /* Move to the left by 50% of the container width */
+    }
+}
