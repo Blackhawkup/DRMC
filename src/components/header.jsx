@@ -50,7 +50,8 @@ const Header = () => {
                             color: 'white',
                             padding: '8px 12px',
                             fontSize: '1.5rem',
-                            fontWeight: '600',
+                            fontWeight: '900', // Bold font weight
+                            fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif', // Clean and modern font
                             borderTopLeftRadius: '5px',
                             borderBottomLeftRadius: '5px',
                         }}
@@ -63,7 +64,8 @@ const Header = () => {
                             color: 'white',
                             padding: '8px 12px',
                             fontSize: '1.5rem',
-                            fontWeight: '600',
+                            fontWeight: '900', // Bold font weight
+                            fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif', // Clean and modern font
                             borderTopRightRadius: '5px',
                             borderBottomRightRadius: '5px',
                         }}

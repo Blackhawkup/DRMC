@@ -1,10 +1,40 @@
 import React from 'react';
-import { Box, Typography, Button, Grid, Paper } from '@mui/material';
+import { Box, Typography, Button, Grid, Paper, Divider } from '@mui/material';
 import { Link } from 'react-router-dom';
 import Header from './../header'; // Import your Header component
 import Footer from './../footer'; // Import your Footer component
 
 const ServicePage = () => {
+    const services = [
+        {
+            name: 'Service 1',
+            description: 'We provide top-notch solutions tailored to your needs.',
+        },
+        {
+            name: 'Service 2',
+            description: 'Our team ensures excellence in every project.',
+        },
+        {
+            name: 'Service 3',
+            description: 'We deliver innovative solutions for your success.',
+        },
+    ];
+
+    const companies = [
+        {
+            name: 'Company A',
+            description: 'We helped Company A streamline their operations and increase efficiency by 30%.',
+        },
+        {
+            name: 'Company B',
+            description: 'Our team developed a cutting-edge marketing strategy that boosted Company B\'s sales by 50%.',
+        },
+        {
+            name: 'Company C',
+            description: 'We provided innovative solutions that enabled Company C to expand into new markets.',
+        },
+    ];
+
     return (
         <Box
             sx={{
@@ -38,16 +68,14 @@ const ServicePage = () => {
                     >
                         Services We Provide
                     </Typography>
-                    <Grid container spacing={4} justifyContent="center">
-                        <Grid item xs={12} md={4}>
-                            <Paper
-                                elevation={3}
-                                sx={{
-                                    padding: '2rem',
-                                    textAlign: 'center',
-                                    backgroundColor: 'white',
-                                }}
-                            >
+                    <Box
+                        sx={{
+                            maxWidth: '1200px',
+                            margin: '0 auto',
+                        }}
+                    >
+                        {services.map((service, index) => (
+                            <Box key={index}>
                                 <Typography
                                     variant="h4"
                                     component="h2"
@@ -56,116 +84,31 @@ const ServicePage = () => {
                                         marginBottom: '1rem',
                                     }}
                                 >
-                                    Service 1
+                                    {service.name}
                                 </Typography>
                                 <Typography
                                     variant="body1"
                                     sx={{
-                                        marginBottom: '1.5rem',
+                                        marginBottom: '2rem',
                                     }}
                                 >
-                                    Description of Service 1. We provide top-notch solutions tailored to your needs.
+                                    {service.description}
                                 </Typography>
-                                <Button
-                                    variant="contained"
-                                    sx={{
-                                        backgroundColor: '#1976d2',
-                                        color: 'white',
-                                        '&:hover': {
-                                            backgroundColor: '#1565c0',
-                                        },
-                                    }}
-                                >
-                                    Learn More
-                                </Button>
-                            </Paper>
-                        </Grid>
-                        <Grid item xs={12} md={4}>
-                            <Paper
-                                elevation={3}
-                                sx={{
-                                    padding: '2rem',
-                                    textAlign: 'center',
-                                    backgroundColor: 'white',
-                                }}
-                            >
-                                <Typography
-                                    variant="h4"
-                                    component="h2"
-                                    sx={{
-                                        fontWeight: 'bold',
-                                        marginBottom: '1rem',
-                                    }}
-                                >
-                                    Service 2
-                                </Typography>
-                                <Typography
-                                    variant="body1"
-                                    sx={{
-                                        marginBottom: '1.5rem',
-                                    }}
-                                >
-                                    Description of Service 2. Our team ensures excellence in every project.
-                                </Typography>
-                                <Button
-                                    variant="contained"
-                                    sx={{
-                                        backgroundColor: '#1976d2',
-                                        color: 'white',
-                                        '&:hover': {
-                                            backgroundColor: '#1565c0',
-                                        },
-                                    }}
-                                >
-                                    Learn More
-                                </Button>
-                            </Paper>
-                        </Grid>
-                        <Grid item xs={12} md={4}>
-                            <Paper
-                                elevation={3}
-                                sx={{
-                                    padding: '2rem',
-                                    textAlign: 'center',
-                                    backgroundColor: 'white',
-                                }}
-                            >
-                                <Typography
-                                    variant="h4"
-                                    component="h2"
-                                    sx={{
-                                        fontWeight: 'bold',
-                                        marginBottom: '1rem',
-                                    }}
-                                >
-                                    Service 3
-                                </Typography>
-                                <Typography
-                                    variant="body1"
-                                    sx={{
-                                        marginBottom: '1.5rem',
-                                    }}
-                                >
-                                    Description of Service 3. We deliver innovative solutions for your success.
-                                </Typography>
-                                <Button
-                                    variant="contained"
-                                    sx={{
-                                        backgroundColor: '#1976d2',
-                                        color: 'white',
-                                        '&:hover': {
-                                            backgroundColor: '#1565c0',
-                                        },
-                                    }}
-                                >
-                                    Learn More
-                                </Button>
-                            </Paper>
-                        </Grid>
-                    </Grid>
+                                {index < services.length - 1 && (
+                                    <Divider
+                                        sx={{
+                                            margin: '2rem auto',
+                                            width: '50%',
+                                            backgroundColor: '#1976d2',
+                                        }}
+                                    />
+                                )}
+                            </Box>
+                        ))}
+                    </Box>
                 </Box>
 
-                {/* Hero Section 2: Campaigns We Have Worked With */}
+                {/* Hero Section 2: Companies We Have Worked With */}
                 <Box
                     sx={{
                         backgroundColor: '#ffffff', // White background
@@ -181,7 +124,7 @@ const ServicePage = () => {
                             marginBottom: '2rem',
                         }}
                     >
-                        Campaigns We Have Worked With
+                        Companies We Have Worked With
                     </Typography>
                     <Typography
                         variant="h5"
@@ -189,25 +132,49 @@ const ServicePage = () => {
                         sx={{
                             maxWidth: '800px',
                             margin: '0 auto',
-                            marginBottom: '2rem',
+                            marginBottom: '4rem',
                         }}
                     >
-                        We have collaborated with various campaigns, delivering exceptional results and innovative strategies tailored to each client's needs.
+                        We have collaborated with various companies, delivering exceptional results and innovative strategies tailored to each client's needs. Here are some of the companies we've partnered with:
                     </Typography>
-                    <Button
-                        variant="contained"
-                        sx={{
-                            backgroundColor: '#1976d2',
-                            color: 'white',
-                            fontSize: '1rem',
-                            padding: '10px 20px',
-                            '&:hover': {
-                                backgroundColor: '#1565c0',
-                            },
-                        }}
-                    >
-                        View Campaigns
-                    </Button>
+                    <Grid container spacing={4} justifyContent="center">
+                        {companies.map((company, index) => (
+                            <Grid item key={index} xs={12} sm={6} md={4}>
+                                <Paper
+                                    elevation={3}
+                                    sx={{
+                                        padding: '2rem',
+                                        textAlign: 'center',
+                                        backgroundColor: 'white',
+                                        borderRadius: '8px',
+                                        transition: 'transform 0.3s ease-in-out',
+                                        '&:hover': {
+                                            transform: 'scale(1.05)',
+                                        },
+                                    }}
+                                >
+                                    <Typography
+                                        variant="h4"
+                                        component="h2"
+                                        sx={{
+                                            fontWeight: ' bold',
+                                            marginBottom: '1rem',
+                                        }}
+                                    >
+                                        {company.name}
+                                    </Typography>
+                                    <Typography
+                                        variant="body1"
+                                        sx={{
+                                            marginBottom: '1.5rem',
+                                        }}
+                                    >
+                                        {company.description}
+                                    </Typography>
+                                </Paper>
+                            </Grid>
+                        ))}
+                    </Grid>
                 </Box>
 
                 {/* Hero Section 3: Contact Us */}
