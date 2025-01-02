@@ -1,17 +1,25 @@
 import React from 'react';
 import { Box, Typography, Button } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Footer = () => {
+    const location = useLocation(); // To track the current route
+
     const buttonStyle = {
         color: 'white',
         textTransform: 'none', // Remove uppercase transformation
         fontSize: '1rem',
         fontWeight: '500',
-        margin: '0 10px', // Horizontal margin for spacing between buttons
+        margin: '0 5px', // Reduced margin for spacing between buttons
+        padding: '6px 12px', // Same padding as header buttons
+        minWidth: '80px', // Same minimum width as header buttons
         '&:hover': {
             backgroundColor: 'rgba(255, 255, 255, 0.1)', // Subtle hover effect
             transition: 'background-color 0.3s ease',
+        },
+        '&.MuiButton-root.Mui-selected': {
+            backgroundColor: 'rgba(255, 255, 255, 0.2)', // Highlight effect for selected button
+            borderBottom: '2px solid white', // Underline effect for selected button
         },
     };
 
@@ -42,18 +50,40 @@ const Footer = () => {
                     justifyContent: 'center',
                     alignItems: 'center',
                     marginBottom: '10px', // Space between buttons and contact info
+                    gap: '10px', // Consistent spacing between buttons
+                    width: '100%', // Full width for button container
                 }}
             >
-                <Button component={Link} to="/" sx={buttonStyle}>
+                <Button
+                    component={Link}
+                    to="/"
+                    sx={buttonStyle}
+                    className={location.pathname === '/' ? 'Mui-selected' : ''}
+                >
                     Home
                 </Button>
-                <Button component={Link} to="/services" sx={buttonStyle}>
+                <Button
+                    component={Link}
+                    to="/services"
+                    sx={buttonStyle}
+                    className={location.pathname === '/services' ? 'Mui-selected' : ''}
+                >
                     Services
                 </Button>
-                <Button component={Link} to="/about" sx={buttonStyle}>
+                <Button
+                    component={Link}
+                    to="/about"
+                    sx={buttonStyle}
+                    className={location.pathname === '/about' ? 'Mui-selected' : ''}
+                >
                     About Us
                 </Button>
-                <Button component={Link} to="/contact" sx={buttonStyle}>
+                <Button
+                    component={Link}
+                    to="/contact"
+                    sx={buttonStyle}
+                    className={location.pathname === '/contact' ? 'Mui-selected' : ''}
+                >
                     Contact
                 </Button>
             </Box>

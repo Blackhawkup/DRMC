@@ -1,8 +1,10 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { AppBar, Toolbar, Button, Box } from '@mui/material';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
+    const location = useLocation(); // To track the current route
+
     const buttonStyle = {
         color: 'white',
         textTransform: 'none', // Remove uppercase transformation
@@ -10,9 +12,15 @@ const Header = () => {
         fontWeight: '500',
         margin: { xs: '0 3px', sm: '0 10px' }, // Reduced margin for small screens
         padding: { xs: '6px 8px', sm: '8px 12px' }, // Smaller padding on small screens
+        flex: 1, // Make all buttons equal in size
+        minWidth: '100px', // Minimum width for buttons
         '&:hover': {
             backgroundColor: 'rgba(255, 255, 255, 0.1)', // Subtle hover effect
             transition: 'background-color 0.3s ease',
+        },
+        '&.MuiButton-root.Mui-selected': {
+            backgroundColor: 'rgba(255, 255, 255, 0.2)', // Highlight effect for selected button
+            borderBottom: '2px solid white', // Underline effect for selected button
         },
     };
 
@@ -80,12 +88,16 @@ const Header = () => {
                         display: 'flex',
                         flexWrap: 'wrap', // Allow buttons to wrap on small screens
                         justifyContent: 'center',
+                        alignItems: 'center',
+                        gap: { xs: '5px', sm: '10px' }, // Space between buttons
+                        width: { xs: '100%', sm: 'auto' }, // Full width on small screens
                     }}
                 >
                     <Button
                         component={Link}
                         to="/"
                         sx={{ ...buttonStyle }}
+                        className={location.pathname === '/' ? 'Mui-selected' : ''}
                     >
                         Home
                     </Button>
@@ -93,6 +105,7 @@ const Header = () => {
                         component={Link}
                         to="/services"
                         sx={{ ...buttonStyle }}
+                        className={location.pathname === '/services' ? 'Mui-selected' : ''}
                     >
                         Services
                     </Button>
@@ -100,6 +113,7 @@ const Header = () => {
                         component={Link}
                         to="/about"
                         sx={{ ...buttonStyle }}
+                        className={location.pathname === '/about' ? 'Mui-selected' : ''}
                     >
                         About Us
                     </Button>
@@ -107,6 +121,7 @@ const Header = () => {
                         component={Link}
                         to="/contact"
                         sx={{ ...buttonStyle }}
+                        className={location.pathname === '/contact' ? 'Mui-selected' : ''}
                     >
                         Contact
                     </Button>
