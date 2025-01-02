@@ -81,7 +81,7 @@ function PictureSlider() {
                             width: '100%',
                             height: '100%',
                             objectFit: 'cover',
-                            filter: 'blur(4px)', // Blur effect
+                            filter: 'blur(3px)', // Blur effect
                         }}
                         onLoad={() => setIsLoading(false)}
                     />
