@@ -1,38 +1,50 @@
 import React from 'react';
 import { Box, Typography, Button, Grid, Paper, Divider } from '@mui/material';
 import { Link } from 'react-router-dom';
-import Header from './../header'; // Import your Header component
-import Footer from './../footer'; // Import your Footer component
+import Header from './../header'; 
+import Footer from './../footer'; 
 
 const ServicePage = () => {
     const services = [
         {
-            name: 'Service 1',
-            description: 'We provide top-notch solutions tailored to your needs.',
+            name: 'Rental of Vehicles and Equipment',
+            description: 'We offer a wide range of vehicles and construction equipment for rent, ensuring you have the right tools to complete your projects efficiently and on time.',
         },
         {
-            name: 'Service 2',
-            description: 'Our team ensures excellence in every project.',
+            name: 'Construction Materials and Transportation',
+            description: 'We supply essential construction materials, including aggregates, sand, and concrete, along with reliable transportation services to deliver them directly to your site.',
         },
         {
-            name: 'Service 3',
-            description: 'We deliver innovative solutions for your success.',
+            name: 'Plant Services',
+            description: 'Our comprehensive plant services include the provision of construction plants, skilled labor, and necessary equipment, tailored to meet the specific needs of your project, whether managed or self-operated.',
         },
     ];
 
-    const companies = [
+    const companies = [ 
         {
-            name: 'Company A',
-            description: 'We helped Company A streamline their operations and increase efficiency by 30%.',
+            name: 'Larsen & Toubro',
+            description: 'We partnered with Larsen & Toubro to enhance their construction processes, resulting in a 25% reduction in project timelines.',
         },
         {
-            name: 'Company B',
-            description: 'Our team developed a cutting-edge marketing strategy that boosted Company B\'s sales by 50%.',
+            name: 'NHAI',
+            description: 'We collaborated with National Highways Authority of India to improve efficiency, leading to a 40% increase in project delivery speed.',
         },
         {
-            name: 'Company C',
-            description: 'We provided innovative solutions that enabled Company C to expand into new markets.',
+            name: 'Shapoorji Pallonji',
+            description: 'We supported Shapoorji Pallonji in optimizing their resource management, which increased their project output by 35%.',
         },
+        {
+            name: 'Paras',
+            description: 'Our innovative solutions helped Paras streamline their operations, resulting in a 20% cost reduction across their projects.',
+        },
+        {
+            name: 'CS Infra',
+            description: 'We assisted CS Infra in implementing advanced technology, enhancing their project management efficiency by 30%.',
+        },
+        {
+            name: 'SS Group',
+            description: 'Our collaboration with SS Group led to the development of sustainable construction practices, improving their project sustainability ratings significantly.',
+        }
     ];
 
     return (
@@ -40,9 +52,9 @@ const ServicePage = () => {
             sx={{
                 display: 'flex',
                 flexDirection: 'column',
-                minHeight: '100vh', // Ensure the page takes up the full height of the viewport
-                backgroundColor: 'white', // White background
-                color: 'black', // Black text
+                minHeight: '100vh', 
+                backgroundColor: 'white', 
+                color: 'black', 
             }}
         >
             {/* Header */}
@@ -53,7 +65,7 @@ const ServicePage = () => {
                 {/* Hero Section 1: Services We Provide */}
                 <Box
                     sx={{
-                        backgroundColor: '#f5f5f5', // Light gray background
+                        backgroundColor: '#f5f5f5', 
                         padding: '6rem 1rem',
                         textAlign: 'center',
                     }}
@@ -111,7 +123,7 @@ const ServicePage = () => {
                 {/* Hero Section 2: Companies We Have Worked With */}
                 <Box
                     sx={{
-                        backgroundColor: '#ffffff', // White background
+                        backgroundColor: '#ffffff', 
                         padding: '6rem 1rem',
                         textAlign: 'center',
                     }}
@@ -180,7 +192,7 @@ const ServicePage = () => {
                 {/* Hero Section 3: Contact Us */}
                 <Box
                     sx={{
-                        backgroundColor: '#f5f5f5', // Light gray background
+                        backgroundColor: '#f5f5f5', 
                         padding: '6rem 1rem',
                         textAlign: 'center',
                     }}

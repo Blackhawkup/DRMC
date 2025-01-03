@@ -1,35 +1,31 @@
 import React, { useRef } from 'react';
-import './MovingLogoStrip.css'; // Import the CSS file
+import './MovingLogoStrip.css'; 
 
 const MovingLogoStrip = () => {
     const carouselRef = useRef(null);
 
     const companies = [
-        { logo: './logo1.png', name: 'Company 1' },
-        { logo: './logo2.png', name: 'Company 2' },
-        { logo: './logo3.png', name: 'Company 3' },
-        { logo: './logo4.png', name: 'Company 4' },
-        { logo: './logo5.png', name: 'Company 5' },
-        { logo: './logo6.png', name: 'Company 6' },
-        { logo: './logo7.png', name: 'Company 7' },
-        { logo: './logo8.png', name: 'Company 8' },
+        { logo: './logo1.png', name: 'Shapoorji Pallonji' },
+        { logo: './logo2.png', name: 'Larsen & Toubro' },
+        { logo: './logo3.png', name: 'NHAI' },
+        { logo: './logo4.png', name: 'Paras' },
+        { logo: './logo5.png', name: 'SS Group' },
+        { logo: './logo6.png', name: 'CS Infra' },
     ];
 
-    // Scroll to the next logo
     const scrollNext = () => {
         if (carouselRef.current) {
             carouselRef.current.scrollBy({
-                left: 200, // Adjust scroll distance
+                left: 200, 
                 behavior: 'smooth',
             });
         }
     };
 
-    // Scroll to the previous logo
     const scrollPrev = () => {
         if (carouselRef.current) {
             carouselRef.current.scrollBy({
-                left: -200, // Adjust scroll distance
+                left: -200, 
                 behavior: 'smooth',
             });
         }

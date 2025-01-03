@@ -3,30 +3,30 @@ import { Box, Typography, Button } from '@mui/material';
 import { Link, useLocation } from 'react-router-dom';
 
 const Footer = () => {
-    const location = useLocation(); // To track the current route
+    const location = useLocation(); 
 
     const buttonStyle = {
         color: 'white',
-        textTransform: 'none', // Remove uppercase transformation
+        textTransform: 'none', 
         fontSize: '1rem',
         fontWeight: '500',
-        margin: '0 5px', // Reduced margin for spacing between buttons
-        padding: '6px 12px', // Same padding as header buttons
-        minWidth: '80px', // Same minimum width as header buttons
+        margin: '0 5px',
+        padding: '6px 12px', 
+        minWidth: '80px', 
         '&:hover': {
-            backgroundColor: 'rgba(255, 255, 255, 0.1)', // Subtle hover effect
+            backgroundColor: 'rgba(255, 255, 255, 0.1)', 
             transition: 'background-color 0.3s ease',
         },
         '&.MuiButton-root.Mui-selected': {
-            backgroundColor: 'rgba(255, 255, 255, 0.2)', // Highlight effect for selected button
-            borderBottom: '2px solid white', // Underline effect for selected button
+            backgroundColor: 'rgba(255, 255, 255, 0.2)', 
+            borderBottom: '2px solid white', 
         },
     };
 
     return (
         <Box
             sx={{
-                backgroundColor: '#1976d2', // Blue color
+                backgroundColor: '#1976d2', 
                 color: 'white',
                 padding: '20px',
                 textAlign: 'left',
@@ -39,19 +39,19 @@ const Footer = () => {
                 alignItems: 'center',
                 boxSizing: 'border-box',
                 overflow: 'hidden',
-                height: '250px', // Increased height to accommodate all elements
+                height: '250px', 
             }}
         >
             {/* Top-Centered Buttons */}
             <Box
                 sx={{
                     display: 'flex',
-                    flexDirection: 'row', // Horizontal alignment
+                    flexDirection: 'row', 
                     justifyContent: 'center',
                     alignItems: 'center',
-                    marginBottom: '10px', // Space between buttons and contact info
-                    gap: '10px', // Consistent spacing between buttons
-                    width: '100%', // Full width for button container
+                    marginBottom: '10px', 
+                    gap: '10px', 
+                    width: '100%', 
                 }}
             >
                 <Button
@@ -92,20 +92,19 @@ const Footer = () => {
             <Box
                 sx={{
                     textAlign: 'center',
-                    marginBottom: '10px', // Space between contact info and logo
+                    marginBottom: '10px', 
                 }}
             >
                 <Typography variant="h6">Contact Information</Typography>
                 <Typography variant="body2">
-                    Your Company Name<br />
-                    Address Line 1<br />
-                    Address Line 2<br />
-                    City, State, Zip Code<br />
-                    Phone: (XXX) XXX-XXXX<br />
-                    Email: example@example.com
+                    Delhi Redimix Concrete Pvt. Ltd.<br />
+                    The White house, Sec-57<br />
+                    Gurugram, India, 122003<br />
+                    Phone: (+91) 9212071000<br />   
+                    Email: delhirmc@gmail.com
                 </Typography>
                 <Typography variant="body2" sx={{ marginTop: '10px' }}>
-                    &copy; {new Date().getFullYear()} Your Company Name. All rights reserved.
+                    &copy; {new Date().getFullYear()} DRMC. All rights reserved.
                 </Typography>
             </Box>
 
@@ -113,7 +112,7 @@ const Footer = () => {
             <Box
                 sx={{
                     display: 'flex',
-                    justifyContent: 'center', // Center the logo horizontally
+                    justifyContent: 'center', 
                     width: '100%',
                 }}
             >

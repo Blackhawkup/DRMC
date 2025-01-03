@@ -10,9 +10,9 @@ const AboutUs = () => {
             sx={{
                 display: 'flex',
                 flexDirection: 'column',
-                minHeight: '100vh', // Ensure the page takes up the full height of the viewport
-                backgroundColor: 'white', // White background
-                color: 'black', // Black text
+                minHeight: '100vh', 
+                backgroundColor: 'white', 
+                color: 'black', 
             }}
         >
             <Header />
@@ -21,7 +21,7 @@ const AboutUs = () => {
             <Box
                 sx={{
                     py: 8,
-                    backgroundColor: '#f5f5f5', // Light gray background
+                    backgroundColor: '#f5f5f5', 
                 }}
             >
                 <Container>
@@ -29,7 +29,7 @@ const AboutUs = () => {
                         Welcome to Our Company
                     </Typography>
                     <Typography variant="h5" sx={{ mb: 4, maxWidth: '800px' }}>
-                        We are dedicated to delivering excellence in every project. With years of experience and a commitment to innovation, we ensure our clients receive the best solutions tailored to their needs.
+                        We are dedicated to delivering excellence in every project. With over 20 years of experience and a commitment to innovation, we ensure our clients receive the best solutions tailored to their specific needs.
                     </Typography>
                 </Container>
             </Box>
@@ -43,29 +43,17 @@ const AboutUs = () => {
                             sx={{
                                 p: 4,
                                 height: '100%',
-                                backgroundColor: '#f5f5f5', // Dark background
+                                backgroundColor: '#f5f5f5', 
                                 color: 'Black',
                                 borderRadius: '8px',
                             }}
                         >
                             <Typography variant="h4" component="h2" sx={{ fontWeight: 'bold', mb: 2 }}>
-                                Our Mission
+                                About Our Owner
                             </Typography>
                             <Typography variant="body1" sx={{ mb: 3 }}>
-                                Our mission is to provide innovative solutions that empower our clients to achieve their goals. We strive for excellence in every project we undertake.
+                                Our owner, Ashok Kumar, brings over 30+ years of experience in government and construction projects. His leadership and vision drive our commitment to quality and customer satisfaction, ensuring that we meet and exceed our clients' expectations.
                             </Typography>
-                            <Button
-                                variant="outlined"
-                                sx={{
-                                    color: '#1976d2',
-                                    borderColor: '#1976d2',
-                                    '&:hover': {
-                                        backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                                    },
-                                }}
-                            >
-                                Read More
-                            </Button>
                         </Paper>
                     </Grid>
                     <Grid item xs={12} md={6}>
@@ -74,28 +62,16 @@ const AboutUs = () => {
                             sx={{
                                 p: 4,
                                 height: '100%',
-                                backgroundColor: '#f5f5f5', // Light gray background
+                                backgroundColor: '#f5f5f5', 
                                 borderRadius: '8px',
                             }}
                         >
                             <Typography variant="h4" component="h2" sx={{ fontWeight: 'bold', mb: 2 }}>
-                                Our Vision
+                                More About the Company                            
                             </Typography>
                             <Typography variant="body1" sx={{ mb: 3 }}>
-                                Our vision is to be a global leader in delivering innovative and sustainable solutions that transform industries and improve lives.
+                                Our vision is to be a leader in delivering innovative and sustainable solutions that transform the construction industry. We focus on quality, efficiency, and environmental responsibility, striving to improve lives through our services and products. At Delhi Redimix, we believe in building strong partnerships with our clients, ensuring their success is at the heart of everything we do.
                             </Typography>
-                            <Button
-                                variant="outlined"
-                                sx={{
-                                    color: '#1976d2',
-                                    borderColor: '#1976d2',
-                                    '&:hover': {
-                                        backgroundColor: 'rgba(25, 118, 210, 0.1)',
-                                    },
-                                }}
-                            >
-                                Read More
-                            </Button>
                         </Paper>
                     </Grid>
                 </Grid>

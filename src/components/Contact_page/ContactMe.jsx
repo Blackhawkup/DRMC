@@ -1,23 +1,20 @@
 import React from 'react';
 import { Box, Typography, Button, Container, Grid, TextField } from '@mui/material';
-import Header from '../header'; // Import your Header component
-import Footer from '../footer'; // Import your Footer component
+import Header from '../header'; 
+import Footer from '../footer'; 
 
 const ContactMe = () => {
-    // Function to handle email button click
     const handleEmailClick = () => {
-        window.location.href = 'mailto:support@example.com';
+        window.location.href = 'mailto:delhirmc@gmail.com';
     };
 
-    // Function to handle call button click
     const handleCallClick = () => {
-        window.location.href = 'tel:+11234567890';
+        window.location.href = 'tel:+919212071000';
     };
 
-    // Function to handle directions button click
     const handleDirectionsClick = () => {
-        const address = encodeURIComponent('123 Main Street, City, Country');
-        window.open(`https://www.google.com/maps/search/?api=1&query=${address}`);
+        const address = encodeURIComponent('The White House Sec-57, Gurugram, India');
+        window.open(`https://www.google.com/maps/place/The+White+House/@28.4262473,77.0706804,17z/data=!3m1!4b1!4m6!3m5!1s0x390d189df01565e5:0xdbabe72dde75fbc!8m2!3d28.4262473!4d77.0732553!16s%2Fg%2F1tfb4z20?entry=ttu&g_ep=EgoyMDI1MDEwMS4wIKXMDSoASAFQAw%3D%3D`);
     };
 
     // Function to handle form submission
@@ -32,9 +29,9 @@ const ContactMe = () => {
             sx={{
                 display: 'flex',
                 flexDirection: 'column',
-                minHeight: '100vh', // Ensure the page takes up the full height of the viewport
-                backgroundColor: 'white', // White background
-                color: 'black', // Black text
+                minHeight: '100vh', 
+                backgroundColor: 'white', 
+                color: 'black', 
             }}
         >
             {/* Header */}
@@ -44,7 +41,7 @@ const ContactMe = () => {
             <Box
                 sx={{
                     py: 8,
-                    backgroundColor: '#f5f5f5', // Light gray background
+                    backgroundColor: '#f5f5f5', 
                 }}
             >
                 <Container>
@@ -69,7 +66,7 @@ const ContactMe = () => {
                                     Email Us
                                 </Typography>
                                 <Typography variant="body1" sx={{ mb: 2 }}>
-                                    support@example.com
+                                    delhirmc@gmail.com
                                 </Typography>
                                 <Button
                                     variant="contained"
@@ -100,7 +97,7 @@ const ContactMe = () => {
                                     Call Us
                                 </Typography>
                                 <Typography variant="body1" sx={{ mb: 2 }}>
-                                    +1 (123) 456-7890
+                                    +91 9212071000
                                 </Typography>
                                 <Button
                                     variant="contained"
@@ -131,7 +128,7 @@ const ContactMe = () => {
                                     Visit Us
                                 </Typography>
                                 <Typography variant="body1" sx={{ mb: 2 }}>
-                                    123 Main Street, City, Country
+                                    The White house, Sec-57, Gurugram
                                 </Typography>
                                 <Button
                                     variant="contain ed"

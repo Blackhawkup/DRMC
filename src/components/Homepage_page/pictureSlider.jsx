@@ -44,9 +44,9 @@ function PictureSlider() {
                 justifyContent: 'center',
                 alignItems: 'center',
                 color: 'white',
-                boxShadow: '0px 10px 30px rgba(0, 0, 0, 0.5)', // 3D shadow effect
-                borderRadius: '10px', // Rounded corners
-                padding: { xs: '20px', sm: '40px', md: '60px' }, // Padding for spacing
+                boxShadow: '0px 10px 30px rgba(0, 0, 0, 0.5)', 
+                borderRadius: '10px', 
+                padding: { xs: '20px', sm: '40px', md: '60px' }, 
             }}
         >
             {/* Slider Background */}
@@ -69,7 +69,7 @@ function PictureSlider() {
                             left: 0,
                             width: '100%',
                             height: '100%',
-                            backgroundColor: 'rgba(0, 0, 0, 0.5)', // Dark overlay
+                            backgroundColor: 'rgba(0, 0, 0, 0.5)', 
                             zIndex: 1,
                         },
                     }}
@@ -81,7 +81,7 @@ function PictureSlider() {
                             width: '100%',
                             height: '100%',
                             objectFit: 'cover',
-                            filter: 'blur(3px)', // Blur effect
+                            filter: 'blur(3px)', 
                         }}
                         onLoad={() => setIsLoading(false)}
                     />
@@ -107,10 +107,10 @@ function PictureSlider() {
                             fontSize: { xs: '2rem', sm: '3rem', md: '4rem' },
                             fontWeight: 'bold',
                             marginBottom: '20px',
-                            textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)', // Text shadow
+                            textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)', 
                         }}
                     >
-                        Border Hero with Cropped Image and Shadows
+                        Welcome to Delhi Redimix Concrete Pvt. Ltd.
                     </Typography> 
                     <Typography
                         variant="h5"
@@ -120,7 +120,7 @@ function PictureSlider() {
                             textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)', // Text shadow
                         }}
                     >
-                        Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.
+                        At DRMC, we deliver high-quality ready-mix concrete solutions for the construction industry along with materials and vehicles. With over 20 years of experience, we are dedicated to supporting your projects, big or small, with advanced technology and a skilled team. Let's build a stronger future together!
                     </Typography>
                 </Grid>
             </Grid>

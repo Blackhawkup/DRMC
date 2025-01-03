@@ -6,57 +6,53 @@
     position: relative;
     width: 100%;
     max-width: 800px;
-    /* Adjust max width as needed */
+    
     margin: 0 auto;
 }
 
 .moving-logo-strip-container {
     width: 100%;
     overflow-x: scroll;
-    /* Enable horizontal scrolling */
+
     scroll-behavior: smooth;
-    /* Smooth scrolling */
+
     scroll-snap-type: x mandatory;
-    /* Snap to each item */
+
     display: flex;
     align-items: center;
     padding: 10px 0;
-    /* Add padding */
+
 }
 
 .moving-logo-strip {
     display: flex;
     gap: 20px;
-    /* Spacing between logos */
+
 }
 
 .company-item {
     flex: 0 0 auto;
-    /* Prevent items from shrinking */
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     scroll-snap-align: start;
-    /* Snap to the start of each item */
+
     width: 120px;
-    /* Width of each item */
+
 }
 
 .company-logo {
     height: 50px;
-    /* Adjust logo height */
     width: auto;
-    /* Maintain aspect ratio */
+
     margin-bottom: 8px;
-    /* Space between logo and name */
 }
 
 .company-name {
     font-size: 14px;
-    /* Adjust font size */
     color: #333;
-    /* Text color */
     text-align: center;
 }
 
@@ -79,10 +75,8 @@
 
 .arrow-button.prev {
     left: -50px;
-    /* Position left arrow */
 }
 
 .arrow-button.next {
     right: -50px;
-    /* Position right arrow */
 }
