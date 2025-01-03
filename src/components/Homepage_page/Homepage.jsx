@@ -7,18 +7,11 @@ import MovingLogoStrip from '../movingRoller/MovingLogoStrip';
 
 const HomePage = () => {
     return (
-        <div>
-            {/* Header */}
+        <div className="homepage">
             <Header />
-
             <PictureSlider />
-
-            {/* HomePage Guide Cards */}
             <HomePageGuide />
-
             <MovingLogoStrip />
-
-            {/* Footer */}
             <Footer />
         </div>
     );
