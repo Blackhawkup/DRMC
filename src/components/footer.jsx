@@ -1,6 +1,10 @@
 import React from 'react';
 import { Box, Typography, Button } from '@mui/material';
 import { Link, useLocation } from 'react-router-dom';
+import HomeIcon from '@mui/icons-material/Home';
+import BuildIcon from '@mui/icons-material/Build';
+import InfoIcon from '@mui/icons-material/Info';
+import ContactMailIcon from '@mui/icons-material/ContactMail';
 
 const Footer = () => {
     const location = useLocation(); 
@@ -12,7 +16,8 @@ const Footer = () => {
         fontWeight: '500',
         margin: '0 5px',
         padding: '6px 12px', 
-        minWidth: '80px', 
+        minWidth: '120px',
+        whiteSpace: 'nowrap',
         '&:hover': {
             backgroundColor: 'rgba(255, 255, 255, 0.1)', 
             transition: 'background-color 0.3s ease',
@@ -42,7 +47,6 @@ const Footer = () => {
                 height: '250px', 
             }}
         >
-            {/* Top-Centered Buttons */}
             <Box
                 sx={{
                     display: 'flex',
@@ -59,6 +63,7 @@ const Footer = () => {
                     to="/"
                     sx={buttonStyle}
                     className={location.pathname === '/' ? 'Mui-selected' : ''}
+                    startIcon={<HomeIcon />}
                 >
                     Home
                 </Button>
@@ -67,6 +72,7 @@ const Footer = () => {
                     to="/services"
                     sx={buttonStyle}
                     className={location.pathname === '/services' ? 'Mui-selected' : ''}
+                    startIcon={<BuildIcon />}
                 >
                     Services
                 </Button>
@@ -75,6 +81,7 @@ const Footer = () => {
                     to="/about"
                     sx={buttonStyle}
                     className={location.pathname === '/about' ? 'Mui-selected' : ''}
+                    startIcon={<InfoIcon />}
                 >
                     About Us
                 </Button>
@@ -83,12 +90,12 @@ const Footer = () => {
                     to="/contact"
                     sx={buttonStyle}
                     className={location.pathname === '/contact' ? 'Mui-selected' : ''}
+                    startIcon={<ContactMailIcon />}
                 >
                     Contact
                 </Button>
             </Box>
 
-            {/* Contact Information and Copyright */}
             <Box
                 sx={{
                     textAlign: 'center',
@@ -108,7 +115,6 @@ const Footer = () => {
                 </Typography>
             </Box>
 
-            {/* Bottom-Centered Logo */}
             <Box
                 sx={{
                     display: 'flex',

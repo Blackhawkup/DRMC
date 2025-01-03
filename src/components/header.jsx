@@ -1,6 +1,11 @@
 import React from 'react';
 import { AppBar, Toolbar, Button, Box } from '@mui/material';
 import { Link, useLocation } from 'react-router-dom';
+import LocalShippingIcon from '@mui/icons-material/LocalShipping'; 
+import HomeIcon from '@mui/icons-material/Home'; 
+import BuildIcon from '@mui/icons-material/Build'; 
+import InfoIcon from '@mui/icons-material/Info'; 
+import ContactMailIcon from '@mui/icons-material/ContactMail'; 
 
 const Header = () => {
     const location = useLocation(); 
@@ -12,8 +17,8 @@ const Header = () => {
         fontWeight: '500',
         margin: { xs: '0 3px', sm: '0 10px' }, 
         padding: { xs: '6px 8px', sm: '8px 12px' }, 
-        flex: 1, 
-        minWidth: '100px', 
+        minWidth: '120px', 
+        whiteSpace: 'nowrap', 
         '&:hover': {
             backgroundColor: 'rgba(255, 255, 255, 0.1)', 
             transition: 'background-color 0.3s ease',
@@ -41,7 +46,7 @@ const Header = () => {
                     padding: { xs: '10px', sm: '0 20px' }, 
                 }}
             >
-                {/* Company Name as Connected Boxes */}
+                {/* Company Name as Connected Boxes with Truck Icon */}
                 <Box
                     component={Link}
                     to="/"
@@ -80,9 +85,18 @@ const Header = () => {
                     >
                         REDIMIX
                     </Box>
+                    {/* Truck Icon (MUI Icon) */}
+                    <LocalShippingIcon 
+                        sx={{ 
+                            marginLeft: '10px', 
+                            width: '40px', 
+                            height: '40px', 
+                            fill: 'white' 
+                        }} 
+                    />
                 </Box>
 
-                {/* Navigation Buttons */}
+                {/* Navigation Buttons with Icons */}
                 <Box
                     sx={{
                         display: 'flex',
@@ -98,14 +112,16 @@ const Header = () => {
                         to="/"
                         sx={{ ...buttonStyle }}
                         className={location.pathname === '/' ? 'Mui-selected' : ''}
+                        startIcon={<HomeIcon />} 
                     >
                         Home
                     </Button>
                     <Button
-                        component={Link}
+                        component={ Link}
                         to="/services"
                         sx={{ ...buttonStyle }}
                         className={location.pathname === '/services' ? 'Mui-selected' : ''}
+                        startIcon={<BuildIcon />} 
                     >
                         Services
                     </Button>
@@ -114,6 +130,7 @@ const Header = () => {
                         to="/about"
                         sx={{ ...buttonStyle }}
                         className={location.pathname === '/about' ? 'Mui-selected' : ''}
+                        startIcon={<InfoIcon />} 
                     >
                         About Us
                     </Button>
@@ -122,6 +139,7 @@ const Header = () => {
                         to="/contact"
                         sx={{ ...buttonStyle }}
                         className={location.pathname === '/contact' ? 'Mui-selected' : ''}
+                        startIcon={<ContactMailIcon />} 
                     >
                         Contact
                     </Button>

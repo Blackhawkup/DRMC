@@ -41,10 +41,24 @@ const ContactMe = () => {
             <Box
                 sx={{
                     py: 8,
-                    backgroundColor: '#f5f5f5', 
+                    backgroundImage: 'url(/contact_us.jpg)', 
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    position: 'relative', 
                 }}
             >
-                <Container>
+                {/* Overlay for better text readability */}
+                <Box
+                    sx={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        backgroundColor: 'rgba(255, 255, 255, 0.7)', 
+                    }}
+                />
+                <Container sx={{ position: 'relative', zIndex: 1 }}> {/* Ensure text is above overlay */}
                     <Typography variant="h2" component="h1" sx={{ fontWeight: 'bold', mb: 3, textAlign: 'center' }}>
                         Get in Touch
                     </Typography>
@@ -107,7 +121,7 @@ const ContactMe = () => {
                                         color: 'white',
                                         '&:hover': {
                                             backgroundColor: '#1565c0',
-                                        },
+ },
                                     }}
                                 >
                                     Call Now
@@ -131,7 +145,7 @@ const ContactMe = () => {
                                     The White house, Sec-57, Gurugram
                                 </Typography>
                                 <Button
-                                    variant="contain ed"
+                                    variant="contained"
                                     onClick={handleDirectionsClick}
                                     sx={{
                                         backgroundColor: '#1976d2',
@@ -153,10 +167,24 @@ const ContactMe = () => {
             <Box
                 sx={{
                     py: 8,
-                    backgroundColor: '#ffffff', // White background
+                    backgroundImage: 'url(/message_background.jpg)', 
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    position: 'relative', 
                 }}
             >
-                <Container>
+                {/* Overlay for better text readability */}
+                <Box
+                    sx={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        backgroundColor: 'rgba(255, 255, 255, 0.7)', 
+                    }}
+                />
+                <Container sx={{ position: 'relative', zIndex: 1 }}> {/* Ensure text is above overlay */}
                     <Typography variant="h2" component="h1" sx={{ fontWeight: 'bold', mb: 3, textAlign: 'center' }}>
                         Send Us a Message
                     </Typography>

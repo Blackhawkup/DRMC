@@ -117,7 +117,7 @@ function PictureSlider() {
                         sx={{
                             fontSize: { xs: '1rem', sm: '1.25rem', md: '1.5rem' },
                             marginBottom: '40px',
-                            textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)', // Text shadow
+                            textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)', 
                         }}
                     >
                         At DRMC, we deliver high-quality ready-mix concrete solutions for the construction industry along with materials and vehicles. With over 20 years of experience, we are dedicated to supporting your projects, big or small, with advanced technology and a skilled team. Let's build a stronger future together!
