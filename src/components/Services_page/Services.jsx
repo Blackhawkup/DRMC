@@ -1,8 +1,78 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Box, Typography, Button, Grid, Paper, Divider } from '@mui/material';
 import { Link } from 'react-router-dom';
 import Header from './../header'; 
 import Footer from './../footer'; 
+
+const PictureSlider = () => {
+    const photos = [
+        '/construction_site_1.jpg',
+        '/construction_site_2.jpg',
+        '/truck_3.jpg',
+        '/truck_4.jpg',
+        '/truck_5.jpg'
+    ];
+
+    const [currentIndex, changeIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            changeIndex((prevIndex) => (prevIndex + 1) % photos.length);
+        }, 3000);
+
+        return () => clearInterval(interval);
+    }, [photos.length]);
+
+    return (
+        <Box
+            sx={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                zIndex: 1,
+            }}
+        >
+            {photos.map((photo, index) => (
+                <Box
+                    key={index}
+                    sx={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        width: '100%',
+                        height: '100%',
+                        opacity: index === currentIndex ? 1 : 0,
+                        visibility: index === currentIndex ? 'visible' : 'hidden',
+                        transition: 'opacity 0.5s ease-in-out, visibility 0.5s ease-in-out',
+                        '&::before': {
+                            content: '""',
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            width: '100%',
+                            height: '100%',
+                            backgroundColor: 'rgba(0, 0, 0, 0.5)', 
+                            zIndex: 1,
+                        },
+                    }}
+                >
+                    <img
+                        src={photo}
+                        alt={`Slide ${index}`}
+                        style={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                            filter: 'blur(3px)', 
+                        }}
+                    />
+                </Box>
+            ))}
+        </Box>
+    );
+};
 
 const ServicePage = () => {
     const services = [
@@ -61,7 +131,8 @@ const ServicePage = () => {
             <Header />
 
             {/* Main Content */}
-            <Box sx={{ flex: 1 }}>
+            < Box sx={{ flex: 1 }}>
+
                 {/* Hero Section 1: Services We Provide */}
                 <Box
                     sx={{
@@ -109,7 +180,7 @@ const ServicePage = () => {
                                 {index < services.length - 1 && (
                                     <Divider
                                         sx={{
-                                            margin: '2rem auto',
+                                            margin: ' 2rem auto',
                                             width: '50%',
                                             backgroundColor: '#1976d2',
                                         }}
@@ -123,17 +194,22 @@ const ServicePage = () => {
                 {/* Hero Section 2: Companies We Have Worked With */}
                 <Box
                     sx={{
-                        backgroundColor: '#ffffff', 
+                        position: 'relative',
                         padding: '6rem 1rem',
                         textAlign: 'center',
+                        overflow: 'hidden',
                     }}
                 >
+                    <PictureSlider />
                     <Typography
                         variant="h2"
                         component="h1"
                         sx={{
                             fontWeight: 'bold',
                             marginBottom: '2rem',
+                            color: 'white',
+                            position: 'relative',
+                            zIndex: 2,
                         }}
                     >
                         Companies We Have Worked With
@@ -145,11 +221,14 @@ const ServicePage = () => {
                             maxWidth: '800px',
                             margin: '0 auto',
                             marginBottom: '4rem',
+                            color: 'white',
+                            position: 'relative',
+                            zIndex: 2,
                         }}
                     >
                         We have collaborated with various companies, delivering exceptional results and innovative strategies tailored to each client's needs. Here are some of the companies we've partnered with:
                     </Typography>
-                    <Grid container spacing={4} justifyContent="center">
+                    <Grid container spacing={4} justifyContent="center" sx={{ position: 'relative', zIndex: 2 }}>
                         {companies.map((company, index) => (
                             <Grid item key={index} xs={12} sm={6} md={4}>
                                 <Paper
@@ -157,7 +236,7 @@ const ServicePage = () => {
                                     sx={{
                                         padding: '2rem',
                                         textAlign: 'center',
-                                        backgroundColor: 'white',
+                                        backgroundColor: 'rgba(255, 255, 255, 0.8)',
                                         borderRadius: '8px',
                                         transition: 'transform 0.3s ease-in-out',
                                         '&:hover': {
@@ -169,7 +248,7 @@ const ServicePage = () => {
                                         variant="h4"
                                         component="h2"
                                         sx={{
-                                            fontWeight: ' bold',
+                                            fontWeight: 'bold',
                                             marginBottom: '1rem',
                                         }}
                                     >
@@ -228,7 +307,7 @@ const ServicePage = () => {
                             fontSize: '1rem',
                             padding: '10px 20px',
                             '&:hover': {
-                                backgroundColor: '#1565c0',
+                                backgroundColor: '#1565 c0',
                             },
                         }}
                     >

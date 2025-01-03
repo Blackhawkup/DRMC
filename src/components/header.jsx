@@ -3,24 +3,24 @@ import { AppBar, Toolbar, Button, Box } from '@mui/material';
 import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
-    const location = useLocation(); // To track the current route
+    const location = useLocation(); 
 
     const buttonStyle = {
         color: 'white',
-        textTransform: 'none', // Remove uppercase transformation
-        fontSize: { xs: '0.8rem', sm: '1rem' }, // Smaller font size on small screens
+        textTransform: 'none', 
+        fontSize: { xs: '0.8rem', sm: '1rem' }, 
         fontWeight: '500',
-        margin: { xs: '0 3px', sm: '0 10px' }, // Reduced margin for small screens
-        padding: { xs: '6px 8px', sm: '8px 12px' }, // Smaller padding on small screens
-        flex: 1, // Make all buttons equal in size
-        minWidth: '100px', // Minimum width for buttons
+        margin: { xs: '0 3px', sm: '0 10px' }, 
+        padding: { xs: '6px 8px', sm: '8px 12px' }, 
+        flex: 1, 
+        minWidth: '100px', 
         '&:hover': {
-            backgroundColor: 'rgba(255, 255, 255, 0.1)', // Subtle hover effect
+            backgroundColor: 'rgba(255, 255, 255, 0.1)', 
             transition: 'background-color 0.3s ease',
         },
         '&.MuiButton-root.Mui-selected': {
-            backgroundColor: 'rgba(255, 255, 255, 0.2)', // Highlight effect for selected button
-            borderBottom: '2px solid white', // Underline effect for selected button
+            backgroundColor: 'rgba(255, 255, 255, 0.2)', 
+            borderBottom: '2px solid white', 
         },
     };
 
@@ -28,17 +28,17 @@ const Header = () => {
         <AppBar
             position="static"
             sx={{
-                backgroundColor: '#1976d2', // Blue color
+                backgroundColor: '#1976d2', 
                 boxShadow: 'none',
             }}
         >
             <Toolbar
                 sx={{
                     display: 'flex',
-                    flexDirection: { xs: 'column', sm: 'row' }, // Stack vertically on small screens
+                    flexDirection: { xs: 'column', sm: 'row' }, 
                     justifyContent: 'space-between',
                     alignItems: 'center',
-                    padding: { xs: '10px', sm: '0 20px' }, // Adjust padding for small screens
+                    padding: { xs: '10px', sm: '0 20px' }, 
                 }}
             >
                 {/* Company Name as Connected Boxes */}
@@ -49,17 +49,17 @@ const Header = () => {
                         display: 'flex',
                         textDecoration: 'none',
                         alignItems: 'center',
-                        marginBottom: { xs: '10px', sm: '0' }, // Space below logo on small screens
+                        marginBottom: { xs: '10px', sm: '0' }, 
                     }}
                 >
                     <Box
                         sx={{
-                            backgroundColor: '#0d47a1', // Dark blue
+                            backgroundColor: '#0d47a1', 
                             color: 'white',
                             padding: '8px 12px',
                             fontSize: '1.5rem',
-                            fontWeight: '900', // Bold font weight
-                            fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif', // Clean and modern font
+                            fontWeight: '900', 
+                            fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif', 
                             borderTopLeftRadius: '5px',
                             borderBottomLeftRadius: '5px',
                         }}
@@ -68,12 +68,12 @@ const Header = () => {
                     </Box>
                     <Box
                         sx={{
-                            backgroundColor: '#2e7d32', // Dark green
+                            backgroundColor: '#2e7d32', 
                             color: 'white',
                             padding: '8px 12px',
                             fontSize: '1.5rem',
-                            fontWeight: '900', // Bold font weight
-                            fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif', // Clean and modern font
+                            fontWeight: '900', 
+                            fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif', 
                             borderTopRightRadius: '5px',
                             borderBottomRightRadius: '5px',
                         }}
@@ -86,11 +86,11 @@ const Header = () => {
                 <Box
                     sx={{
                         display: 'flex',
-                        flexWrap: 'wrap', // Allow buttons to wrap on small screens
+                        flexWrap: 'wrap', 
                         justifyContent: 'center',
                         alignItems: 'center',
-                        gap: { xs: '5px', sm: '10px' }, // Space between buttons
-                        width: { xs: '100%', sm: 'auto' }, // Full width on small screens
+                        gap: { xs: '5px', sm: '10px' }, 
+                        width: { xs: '100%', sm: 'auto' }, 
                     }}
                 >
                     <Button
